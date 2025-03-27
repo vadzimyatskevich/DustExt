@@ -140,4 +140,4 @@ pyinstaller --noconsole --onefile main.py
 
 ## Лицензия
 
-MIT License. См. файл [LICENSE](LICENSE).
+The Unlicense. См. файл [LICENSE](LICENSE).
