@@ -24,7 +24,7 @@
 
 ## Установка
 
-1. Склонируйте репозиторий:
+1. Скопируйте репозиторий:
    ```bash
    git clone https://github.com/vadzimyatskevich/DustExt.git
    cd DustExt
