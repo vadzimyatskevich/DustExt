@@ -232,11 +232,6 @@ control_frame.grid_columnconfigure([0,1,2,3], weight=1)
 state_label = tk.Label(control_frame, text=f"{lang['output_state']} ...", font=("Arial", 30))
 state_label.grid(row=0, column=1, padx=5, sticky="w")
 
-
-# Buttons
-# button_frame = tk.Frame(root)
-# button_frame.pack(pady=5,padx=5, fill="x", side=tk.LEFT)
-
 on_button = tk.Button(
     control_frame, 
     text=lang["turn_on"], 
@@ -264,22 +259,20 @@ off_button.grid(row=0, column=3, padx=5, sticky="e")
 # )
 # toggle_button.grid(row=0, column=4, padx=5, sticky="w")
 
-
 info_frame = tk.Frame(root,borderwidth=1, background=None)
 info_frame.grid(row=1, column=0, sticky="nsew", pady=5,padx=5,)#.pack(pady=0,padx=5, side=tk.BOTTOM, fill="x")
+
 # Configure control_frame grid to expand
 info_frame.grid_rowconfigure([0,1,2,3,4], weight=1)
 info_frame.grid_columnconfigure([0,1,2,3,4], weight=1)
 time_label = tk.Label(info_frame, text="Last update: --:--:--", font=("Arial", 8), fg="gray")
 time_label.grid(row=0, column=0, padx=10, sticky=tk.W)
-
 logging_label = tk.Label(info_frame, text=f"{lang['logging']} ...", font=("Arial", 8), fg="gray")
 logging_label.grid(row=0, column=1, padx=10, sticky=tk.W)
 tk.Label(info_frame, text=f"{lang['device']} {config['device_ip']}", font=("Arial", 8), fg="gray").grid(row=0, column=2, sticky="w")
 tk.Label(info_frame, text=f"{lang['output']} {config['output']}", font=("Arial", 8), fg="gray").grid(row=0, column=3, sticky="w")
 status_label = tk.Label(info_frame, text=f"{lang['status']} ...", font=("Arial", 8))
 status_label.grid(row=0, column=4, padx=5, sticky="w")
-
 
 
 # Start polling thread

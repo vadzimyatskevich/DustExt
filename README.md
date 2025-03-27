@@ -141,7 +141,3 @@ pyinstaller --noconsole --onefile main.py
 ## Лицензия
 
 MIT License. См. файл [LICENSE](LICENSE).
-
-## Автор
-
-Вадим Яцкевич 2025
