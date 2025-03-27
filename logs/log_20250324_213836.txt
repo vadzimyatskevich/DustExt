@@ -1,0 +1,19 @@
+[2025-03-24 21:38:36] Logging started at 2025-03-24 21:38:36
+[2025-03-24 21:38:36] Configuration: {
+  "device_ip": "192.168.100.26",
+  "output": 1,
+  "poll_interval": 5,
+  "username": "username",
+  "password": "password",
+  "logging": true,
+  "language": "ru"
+}
+[2025-03-24 21:38:37] Output state changed from None to ON
+[2025-03-24 21:38:49] Sending command: Off
+[2025-03-24 21:38:49] Command Off successful
+[2025-03-24 21:38:49] Output state changed from ON to OFF
+[2025-03-24 21:38:54] Sending command: Off
+[2025-03-24 21:38:55] Command Off successful
+[2025-03-24 21:38:55] Sending command: Toggle
+[2025-03-24 21:38:56] Command Toggle successful
+[2025-03-24 21:38:56] Output state changed from OFF to ON

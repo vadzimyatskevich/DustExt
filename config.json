@@ -1,0 +1,9 @@
+{
+    "device_ip": "192.168.0.169",
+    "output": 1,
+    "poll_interval": 5,
+    "username": "admin",
+    "password": "password",
+    "logging": false,
+    "language": "en"
+}
