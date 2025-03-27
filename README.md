@@ -135,7 +135,7 @@
 
 Для создания исполняемого файла (Windows):
 ```bash
-pyinstaller --noconsole --onefile main.py
+pyinstaller --noconsole --onefile --icon=img/icon.ico main.py
 ```
 
 ## Лицензия
