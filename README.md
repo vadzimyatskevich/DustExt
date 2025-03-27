@@ -26,8 +26,8 @@
 
 1. Склонируйте репозиторий:
    ```bash
-   git clone https://github.com/ваш-репозиторий/tasmota-controller.git
-   cd tasmota-controller
+   git clone https://github.com/vadzimyatskevich/DustExt.git
+   cd DustExt
    ```
 
 2. Установите зависимости:
@@ -97,7 +97,7 @@
 
 1. Запустите программу:
    ```bash
-   python main.py
+   python3 main.py
    ```
 
 2. Интерфейс программы:
@@ -105,7 +105,6 @@
    - Кнопки управления:
      - ВКЛЮЧИТЬ - включает реле
      - ВЫКЛЮЧИТЬ - выключает реле
-     - ПЕРЕКЛЮЧИТЬ - меняет состояние реле
 
 3. Логирование:
    - При включенном логировании создается папка `logs`
@@ -136,7 +135,7 @@
 
 Для создания исполняемого файла (Windows):
 ```bash
-pyinstaller --noconsole --onefile tasmota_controller.py
+pyinstaller --noconsole --onefile main.py
 ```
 
 ## Лицензия
