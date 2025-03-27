@@ -215,56 +215,59 @@ load_language()
 # Create GUI
 root = tk.Tk()
 root.title(lang["window_title"])
-root.geometry("640x100")
+root.geometry("640x120")
 root.protocol("WM_DELETE_WINDOW", on_closing)
 
 # Configure root grid to expand
-root.grid_rowconfigure(0, weight=1)  # Make row 0 expandable
-root.grid_columnconfigure(0, weight=1)  # Make column 0 expandable
+root.grid_rowconfigure([0], weight=1)  # Make row 0 expandable
+root.grid_columnconfigure([0], weight=1)  # Make column 0 expandable
 
 control_frame = tk.Frame(root)
-control_frame.grid(row=0, column=0,padx=5, pady=5, sticky="nsew")  # Make frame stick to all sides
-
 # Configure control_frame grid to expand
 control_frame.grid_rowconfigure([0], weight=1)
-control_frame.grid_columnconfigure([0,1,2,3], weight=1)
+control_frame.grid_columnconfigure([0,1,2], weight=1)
 
-state_label = tk.Label(control_frame, text=f"{lang['output_state']} ...", font=("Arial", 30))
-state_label.grid(row=0, column=1, padx=5, sticky="w")
+control_frame.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")  # Make frame stick to all sides
+
+state_label = tk.Label(control_frame, text=f"{lang['output_state']}", font=("Arial", 30))
+state_label.grid(row=0,  column=1, padx=5, sticky="nsew")
 
 on_button = tk.Button(
     control_frame, 
+    activebackground="green",
     text=lang["turn_on"], 
     command=turn_on,
     width=12,
     height=3
 )
-on_button.grid(row=0, column=2, ipadx=5, sticky="e")
+on_button.grid(row=0, column=0, padx=5, sticky="nsew")
 
 off_button = tk.Button(
     control_frame,
+    activebackground="red",
     text=lang["turn_off"],
     command=turn_off,
     width=12,
     height=3
 )
-off_button.grid(row=0, column=3, padx=5, sticky="e")
+off_button.grid(row=0, column=2, padx=5, sticky="nsew")
 
 # toggle_button = tk.Button(
 #     control_frame,
+#     foreground="brown",
 #     text=lang["toggle"],
 #     command=toggle,
 #     width=12,
 #     height=2
 # )
-# toggle_button.grid(row=0, column=4, padx=5, sticky="w")
+# toggle_button.grid(row=0, column=1, padx=5, sticky="nsew")
 
-info_frame = tk.Frame(root,borderwidth=1, background=None)
-info_frame.grid(row=1, column=0, sticky="nsew", pady=5,padx=5,)#.pack(pady=0,padx=5, side=tk.BOTTOM, fill="x")
+info_frame = tk.Frame(root)
+info_frame.grid(row=1, column=0, sticky="nsew", pady=0, padx=5)
 
 # Configure control_frame grid to expand
-info_frame.grid_rowconfigure([0,1,2,3,4], weight=1)
-info_frame.grid_columnconfigure([0,1,2,3,4], weight=1)
+info_frame.grid_rowconfigure([0], weight=1)
+info_frame.grid_columnconfigure([0,1,2], weight=1)
 time_label = tk.Label(info_frame, text="Last update: --:--:--", font=("Arial", 8), fg="gray")
 time_label.grid(row=0, column=0, padx=10, sticky=tk.W)
 logging_label = tk.Label(info_frame, text=f"{lang['logging']} ...", font=("Arial", 8), fg="gray")
